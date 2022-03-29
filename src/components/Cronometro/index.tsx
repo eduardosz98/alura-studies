@@ -1,7 +1,7 @@
 import MyButton from "../Button";
 import Relogio from "./Relogio";
 import style from "./Cronometro.module.scss";
-import { timeToSeconds } from "../../types/utils/time";
+import { timeToSeconds } from "../../common/utils/time";
 import { ITask } from "../../types/task";
 import { useEffect, useState } from "react";
 
