@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Cronometro } from '../components/Cronometro';
 import FormExample from '../components/Form'
 import List from '../components/List'
@@ -45,30 +45,4 @@ function App() {
   )
 }
 
-interface Repo {
-  id: string,
-  name: string,
-}
-
-function AppApi() {
-  useEffect(() => {
-    async function loadRepos() {
-      const response = await fetch("https://api.github.com/users/eduardosz98/repos");
-      const repos = await response.json();
-
-      setRepo(repos);
-    }
-    loadRepos();
-  }, []);
-  const [repos, setRepo] = useState<Repo[]>([]);
-
-  return (
-    <ul>
-      {repos.map(repo => (
-        <li key={repo.id}>{repo.name}</li>
-      ))}
-    </ul>
-  )
-}
-
-export default AppApi
+export default App

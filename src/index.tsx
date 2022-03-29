@@ -1,11 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import "normalize.css";
 import './index.css';
 import App from './pages/App';
+import AppApi from './pages/AppApi';
+import Restaurant from './pages/Restaurant';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    {/* <App /> */}
+    {/* <AppApi /> */}
+    <Restaurant />
   </React.StrictMode>,
   document.getElementById('root')
 );
