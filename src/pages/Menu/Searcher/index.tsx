@@ -11,6 +11,7 @@ export default function Searcher({ search, setSearch }: Props) {
     return (
         <div className={styles.buscador}>
             <input
+                placeholder="Buscar"
                 type="text"
                 value={search}
                 onChange={(event) => setSearch(event.target.value)} />

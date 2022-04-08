@@ -5,12 +5,14 @@ import './index.css';
 import App from './pages/App';
 import AppApi from './pages/AppApi';
 import Restaurant from './pages/Restaurant';
+import PL from './pages/PL';
 
 ReactDOM.render(
   <React.StrictMode>
     {/* <App /> */}
     {/* <AppApi /> */}
     <Restaurant />
+    {/* <PL /> */}
   </React.StrictMode>,
   document.getElementById('root')
 );
