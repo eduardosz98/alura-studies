@@ -9,18 +9,18 @@ interface Props {
 
 export default function List({ tasks, selectTask }: Props) {
 
-    return (
-        <aside className={style.listaTarefas}>
-            <h2>Estudos do dia</h2>
-            <ul>
-                {tasks.map((item) =>
-                    <Item
-                        selectTask={selectTask}
-                        key={item.id}
-                        {...item}
-                    />
-                )}
-            </ul>
-        </aside>
-    )
+	return (
+		<aside className={style.listaTarefas}>
+			<h2>Estudos do dia</h2>
+			<ul>
+				{tasks.map((item) =>
+					<Item
+						selectTask={selectTask}
+						key={item.id}
+						{...item}
+					/>
+				)}
+			</ul>
+		</aside>
+	);
 }

@@ -1,20 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import "normalize.css";
+import 'normalize.css';
 import './index.css';
 import App from './pages/App';
 import AppApi from './pages/AppApi';
 import Restaurant from './pages/Restaurant';
 import PL from './pages/PL';
+import Home from 'pages/Home';
+import Router from './routes';
+
+// const currentComponent = window.location.pathname === '/' ? <Home /> : <Restaurant />;
 
 ReactDOM.render(
-  <React.StrictMode>
-    {/* <App /> */}
-    {/* <AppApi /> */}
-    <Restaurant />
-    {/* <PL /> */}
-  </React.StrictMode>,
-  document.getElementById('root')
+	<React.StrictMode>
+		{/* <App /> */}
+		{/* <AppApi /> */}
+		{/* <Restaurant /> */}
+		{/* {currentComponent} */}
+		<Router />
+		{/* <PL /> */}
+	</React.StrictMode>,
+	document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function

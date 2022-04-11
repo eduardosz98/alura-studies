@@ -1,7 +1,7 @@
-import Menu from "./Menu";
+import Menu from './Menu';
 
 export default function Restaurant() {
-    return (
-        <Menu />
-    )
+	return (
+		<Menu />
+	);
 }

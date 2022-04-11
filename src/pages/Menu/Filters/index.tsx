@@ -16,22 +16,22 @@ interface Props {
 
 export default function Filters({ option, setFilter }: Props) {
 
-    function selectFilter(filter: IOption) {
-        if (filter.id === option) return setFilter(null);
-        return setFilter(filter.id);
-    }
+	function selectFilter(filter: IOption) {
+		if (filter.id === option) return setFilter(null);
+		return setFilter(filter.id);
+	}
 
-    return (
-        <div className={styles.filters}>
-            {filters.map((filter) => (
-                <button
-                    key={filter.id}
-                    className={classNames({
-                        [styles.filters__option]: true,
-                        [styles["filters__option--ativo"]]: filter.id === option
-                    })}
-                    onClick={() => selectFilter(filter)}>{filter.label}</button>
-            ))}
-        </div >
-    )
+	return (
+		<div className={styles.filters}>
+			{filters.map((filter) => (
+				<button
+					key={filter.id}
+					className={classNames({
+						[styles.filters__option]: true,
+						[styles['filters__option--ativo']]: filter.id === option
+					})}
+					onClick={() => selectFilter(filter)}>{filter.label}</button>
+			))}
+		</div >
+	);
 }
